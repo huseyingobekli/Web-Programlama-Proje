@@ -23,6 +23,8 @@ namespace Web_Programlama_Proje.Controllers
             return View();
         }
 
+ 
+
         public IActionResult test3()
         {
             return View();
