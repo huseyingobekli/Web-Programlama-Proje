@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_layoutAccount.cshtml";
+}
+
+@model List<webprogramlama4.Data.User>
+
+
+<h2>Admin Dashboard</h2>
+<p>Kayıtlı Kullanıcılar:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Kullanıcı Adı</th>
+            <th>Email</th>
+            <th>Rol</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td>@user.Email</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+

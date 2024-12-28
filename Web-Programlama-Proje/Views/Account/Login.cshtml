@@ -1,0 +1,92 @@
+﻿
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_layoutAccount.cshtml";
+}
+
+
+
+<!-- bradcam_area_start -->
+<div class="bradcam_area breadcam_bg overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3></h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bradcam_area_end -->
+
+
+<div class="make_apppointment_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title pl-68">
+                    <h3>Log in Now</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="appoint_ment_form pl-68">
+                    <form action="#" method="post" asp-controller="Account" asp-action="Login">
+                        <div class="single_field">
+                            <input type="text" name="username" placeholder="Username">
+                        </div>
+                      
+                        <div class="single_field">
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+
+                        <div class="form_btn">
+                            <button class="boxed-btn3" type="submit">Login in</button>
+                            <div class="loginLink">
+                                <a @Html.ActionLink("Don't Have an Account? Sign in", "Register", "Account")<i class="ti-angle-right"></i></a>
+                            </div>
+                        </div>
+                                @if (ViewBag.ErrorMessage != null)
+                                {
+                                    <p class="text-danger">@ViewBag.ErrorMessage</p>
+                                }
+                            </form>
+
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1">
+                <div class="appointMent_info">
+                    <div class="single_appontment">
+                        <h4>Visit our studio at</h4>
+                        <p>
+                            221B Baker Street, P. O Box 3 Park Road,
+                            USA - 215852
+                        </p>
+                    </div>
+                    <div class="single_appontment">
+                        <h4>Message us</h4>
+                        <p>
+                            Support@colorlib.net <br>
+                            (+68) 120034509
+                        </p>
+                    </div>
+                    <div class="single_appontment">
+                        <h4>Working Hours</h4>
+                        <p class="d-flex justify-content-between">
+                            <span>Monday - Friday</span>
+                            <span>:  09.00 - 23.00</span>
+                        </p>
+                        <p class="d-flex justify-content-between">
+                            <span>Sunday</span>
+                            <span>:  09.00 - 16.00s</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

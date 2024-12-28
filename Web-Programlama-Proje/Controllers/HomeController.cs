@@ -1,43 +1,36 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Web_Programlama_Proje.Models;
 
-namespace Web_Programlama_Proje.Controllers
+namespace webprogramlama4.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Blog()
+        {
+            return View();
+        }
+        public IActionResult Contact()
         {
             return View();
         }
 
- 
-
-        public IActionResult test3()
-        {
-            return View();
-        }
-        public IActionResult about()
+        public IActionResult Service()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Singleblog()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
+
+
     }
 }
